@@ -13,7 +13,7 @@ public class Book implements Serializable, Cloneable/*, Comparable<Book> */{
     private String name;
     private String number;
 
-    /*public String getName() {
+    public String getName() {
         return name;
     }
 
@@ -27,7 +27,7 @@ public class Book implements Serializable, Cloneable/*, Comparable<Book> */{
 
     public void setNumber(String number) {
         this.number = number;
-    }*/
+    }
 
     public Book(){}
 
