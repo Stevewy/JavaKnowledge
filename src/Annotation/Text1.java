@@ -16,7 +16,7 @@ public class Text1 {
 
 
     public static void main(String[] args) {
-        String pkgName = "TextClass";
+        /*String pkgName = "TextClass";
         Package pkg = Package.getPackage(pkgName);
         //获得包上的注解
         Annotation[] annotations = pkg.getAnnotations();
@@ -25,7 +25,7 @@ public class Text1 {
             if (an instanceof Text) {
                 System.out.println("Hi,I'm the PkgAnnotation");
             }
-        }
+        }*/
     }
     public void text() {
         System.out.print("请输入密码:");
