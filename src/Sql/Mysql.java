@@ -1,10 +1,13 @@
 package Sql;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Properties;
 
 /**
  * @author WangYao
@@ -12,39 +15,46 @@ import java.sql.Statement;
  * @function
  */
 public class Mysql {
-    public static void main(String[] args) {
-        Connection con;
-        String driver="com.mysql.jdbc.Driver";
-        String url="jdbc:mysql://localhost:3306/Library";
-        String user="root";
-        String password="wangyao";
-        try {
-            Class.forName(driver);
-            con = DriverManager.getConnection(url, user, password);
-            if (!con.isClosed()) {
-                System.out.println("数据库连接成功");
-            }
-            Statement statement = con.createStatement();
-            String sql = "CREATE TABLE book(\n" +
-                    "\tid INT PRIMARY KEY AUTO_INCREMENT,\n" +
-                    "\tbname VARCHAR(20) NOT NULL,\n" +
-                    "\tprice DOUBLE CHECK(price BETWEEN 0 AND 100),\n" +
-                    "\tauthor VARCHAR(20) DEFAULT '佚名',\n" +
-                    "\tpublishDate DATETIME\n" +
-                    ");";
-            ResultSet resultSet = statement.executeQuery(sql);
-            /*String name;
-            while (resultSet.next()) {
-                name = resultSet.getString("name");
-                System.out.println("姓名：" + name);
-            }*/
-            resultSet.close();
-            con.close();
-        } catch (ClassNotFoundException e) {
-            System.out.println("数据库驱动没有安装");
+    //分开可以只加载一次,得到多个连接
+    private static String driver;
+    private static String url;
+    private static String user;
+    private static String password;
 
+    static{
+        InputStream resourceAsStream = Mysql.class.getClassLoader().getResourceAsStream("Sql/db.properties");
+
+        Properties p = new Properties();
+        try {
+            p.load(resourceAsStream);
+            driver = p.getProperty("driver");
+            url = p.getProperty("url");
+            user = p.getProperty("user");
+            password = p.getProperty("password");
+            Class.forName(driver);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public static Connection getConnection() throws SQLException{
+        return DriverManager.getConnection(url, user, password);
+    }
+
+    public static void main(String[] args) {
+        try {
+            Connection con = Mysql.getConnection();
+            Statement s = con.createStatement();//环境
+            String sql = "select * from book";
+            ResultSet r = s.executeQuery(sql);
+            while(r.next()){
+                System.out.println(r.getInt("id"));
+            }
         } catch (SQLException e) {
-            System.out.println("数据库连接失败");
+            e.printStackTrace();
         }
     }
 }
