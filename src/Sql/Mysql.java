@@ -1,12 +1,8 @@
 package Sql;
 
+import java.sql.*;
 import java.io.IOException;
 import java.io.InputStream;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Properties;
 
 /**
@@ -31,27 +27,31 @@ public class Mysql {
             url = p.getProperty("url");
             user = p.getProperty("user");
             password = p.getProperty("password");
-            Class.forName(driver);
+            Class.forName(driver);//sql5后可以不写,可以自动注册驱动
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
-    public static Connection getConnection() throws SQLException{
+    public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(url, user, password);
     }
 
-    public static void main(String[] args) {
+    public static void close(Connection con, Statement sta, ResultSet res){//等会使用lombok的@nonNull    变成null让垃圾回收工作
         try {
-            Connection con = Mysql.getConnection();
-            Statement s = con.createStatement();//环境
-            String sql = "select * from book";
-            ResultSet r = s.executeQuery(sql);
-            while(r.next()){
-                System.out.println(r.getInt("id"));
+            if(con != null){
+                con.close();
+                con = null;
+            }
+            if(sta != null){
+                sta.close();
+                sta = null;
+            }
+            if(res != null){
+                res.close();
+                res = null;
             }
         } catch (SQLException e) {
             e.printStackTrace();
