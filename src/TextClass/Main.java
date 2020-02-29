@@ -27,14 +27,14 @@ public class Main {
         }
     }
 
-//    private static String statics = "静态块";
-//    static {System.out.println(statics);}
-
     public static void main(String... args) throws IOException {
 
-        System.out.println(Integer.toHexString(15));
-
-
+        /*
+         * java中a=b返回b           但x+=x+=1时,先计算x+=1得到1,再计算x+=1(此时x还是0,但c为1),结果为1
+         */
+//        int x = 10;
+//        System.out.println(x = 0);
+//        System.out.println(x += x += 1);
 
         /*
          * 块和静态块
@@ -79,7 +79,7 @@ public class Main {
 //        E[] es = E.values();
 
         /*
-         * Compare与Comparable
+         * Comparator与Comparable
          */
 //        Book[] books = {new Book("a","1"), new Book("b","11"), new Book("a","2")};
 //        Arrays.sort(books);                            //自己Comparable

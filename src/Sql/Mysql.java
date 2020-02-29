@@ -8,14 +8,15 @@ import java.util.Properties;
 /**
  * @author WangYao
  * @date 2020/2/27
- * @function
+ * @function jdbc工具类
  */
-public class Mysql {
+public final class Mysql {
     //分开可以只加载一次,得到多个连接
     private static String driver;
     private static String url;
     private static String user;
     private static String password;
+    private static Connection con = null;
 
     static{
         InputStream resourceAsStream = Mysql.class.getClassLoader().getResourceAsStream("Sql/db.properties");
@@ -36,7 +37,10 @@ public class Mysql {
     }
 
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(url, user, password);
+        if(con == null)
+            return con = DriverManager.getConnection(url, user, password);
+        else
+            return con;
     }
 
     public static void close(Connection con, Statement sta, ResultSet res){//等会使用lombok的@nonNull    变成null让垃圾回收工作
