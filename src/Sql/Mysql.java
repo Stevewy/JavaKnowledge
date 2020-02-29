@@ -22,7 +22,7 @@ public class Mysql {
 
         Properties p = new Properties();
         try {
-            p.load(resourceAsStream);
+            p.load(resourceAsStream);//不使用类加载器,可以使用FileReader来读取文件(注意,要使用绝对路径),但明显类加载器要好
             driver = p.getProperty("driver");
             url = p.getProperty("url");
             user = p.getProperty("user");
@@ -56,5 +56,17 @@ public class Mysql {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public static boolean rollback(Connection con){
+        if(con != null){
+            try {
+                con.rollback();
+                return true;
+            } catch (SQLException e) {
+                return false;
+            }
+        }
+        return false;
     }
 }

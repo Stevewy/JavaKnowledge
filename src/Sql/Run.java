@@ -1,9 +1,6 @@
 package Sql;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 /**
  * @author WangYao
@@ -11,32 +8,24 @@ import java.sql.Statement;
  * @function
  */
 public class Run {
-    public static void main(String[] args) {
-        try {
-            Connection con = Mysql.getConnection();
-            /*
-             * 事务:
-             * setAutoCommit()
-             * commit()
-             * rollback()
-             */
-            Statement s = con.createStatement();//环境  preparedStatement()
-            String sql = "select * from book";
-            ResultSet r = s.executeQuery(sql);
-            /*
-             * execute
-             * executeQuery DQL 返回resultset
-             * executeUpdate DML DDL 返回影响的行数
-             */
-            while(r.next()){
-                System.out.println(r.getString("bname"));
-            }
-            int x = s.executeUpdate("update book set bname = '走进科学1' where bname = '走进科学1' ");
-            System.out.println(x);
 
-            Mysql.close(con,s,r);
-        } catch (SQLException e) {
-            e.printStackTrace();
+    public static void main(String[] args) {
+        Connection con = null;
+        PreparedStatement p = null;
+        ResultSet r = null;
+        String sql = "select * from book";
+        try {
+            con = Mysql.getConnection();
+            con.setAutoCommit(false);
+            p = con.prepareStatement("update book set number = number + ? where id = ?;");
+            p.setInt(1,1);
+            p.setInt(2,1);
+            p.executeUpdate();
+            con.commit();
+        } catch (Exception e) {
+            Mysql.rollback(con);
+        } finally {
+            Mysql.close(con, p, r);
         }
     }
 
