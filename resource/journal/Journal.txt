@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-12-14T11:45:53.640171400Z</date>
+  <millis>1576323953640</millis>
+  <nanos>171400</nanos>
+  <sequence>0</sequence>
+  <logger>com.wy</logger>
+  <level>WARNING</level>
+  <class>textclass.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>警告???</message>
+</record>
+<record>
+  <date>2019-12-14T11:45:53.690171900Z</date>
+  <millis>1576323953690</millis>
+  <nanos>171900</nanos>
+  <sequence>1</sequence>
+  <logger>com.wy</logger>
+  <level>FINER</level>
+  <class>textclass.Main</class>
+  <method>read</method>
+  <thread>1</thread>
+  <message>THROW</message>
+  <exception>
+    <message>java.lang.exception: 哈哈</message>
+    <frame>
+      <class>textclass.Main</class>
+      <method>main</method>
+      <line>50</line>
+    </frame>
+  </exception>
+</record>
+</log>
