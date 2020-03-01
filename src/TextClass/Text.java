@@ -1,6 +1,6 @@
 package TextClass;
 
-import java.util.Stack;
+import org.junit.Test;
 
 /**
  * @author WangYao
@@ -9,5 +9,9 @@ import java.util.Stack;
  */
 public class Text {
 
+    @Test
+    public void Test1(){
+        System.out.println("Test1");
+    }
 
 }

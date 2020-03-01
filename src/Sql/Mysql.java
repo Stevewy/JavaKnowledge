@@ -62,6 +62,10 @@ public final class Mysql {
         }
     }
 
+    public static void close(Connection con, Statement sta){
+        close(con, sta, null);
+    }
+
     public static boolean rollback(Connection con){
         if(con != null){
             try {
