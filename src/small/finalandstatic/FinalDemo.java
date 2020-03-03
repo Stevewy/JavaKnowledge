@@ -1,6 +1,6 @@
 package small.finalandstatic;
 
-import textclass.Book;
+import testclass.Book;
 
 import java.util.Random;
 

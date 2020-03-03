@@ -1,7 +1,7 @@
 package collection.setdemo;
 
-import textclass.Book;
-import textclass.BookCompare;
+import testclass.Book;
+import testclass.BookCompare;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;

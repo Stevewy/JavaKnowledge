@@ -1,4 +1,4 @@
-package textclass;
+package testclass;
 
 import java.io.IOException;
 
@@ -60,14 +60,14 @@ public class Main {
 //        }
 //        catch (exception e){
 //            l.log(Level.WARNING, "read" , e);
-//            l.throwing("textclass.Main", "read", e);
+//            l.throwing("testclass.Main", "read", e);
 //        }
 
         /*
          * ...的使用
          */
 //        if(t-- == 1)
-//            textclass.Main.main("asd","sad","few","fewa");
+//            testclass.Main.main("asd","sad","few","fewa");
 //        else
 //            for(string s : args)
 //                System.out.println(s);

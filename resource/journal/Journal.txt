@@ -8,7 +8,7 @@
   <sequence>0</sequence>
   <logger>com.wy</logger>
   <level>WARNING</level>
-  <class>textclass.Main</class>
+  <class>testclass.Main</class>
   <method>main</method>
   <thread>1</thread>
   <message>警告???</message>
@@ -20,14 +20,14 @@
   <sequence>1</sequence>
   <logger>com.wy</logger>
   <level>FINER</level>
-  <class>textclass.Main</class>
+  <class>testclass.Main</class>
   <method>read</method>
   <thread>1</thread>
   <message>THROW</message>
   <exception>
     <message>java.lang.exception: 哈哈</message>
     <frame>
-      <class>textclass.Main</class>
+      <class>testclass.Main</class>
       <method>main</method>
       <line>50</line>
     </frame>

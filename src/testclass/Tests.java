@@ -1,15 +1,13 @@
-package textclass;
-
-import org.junit.Test;
+package testclass;
 
 /**
  * @author WangYao
  * @date 2020/1/9
  * @function
  */
-public class Text {
+public class Tests {
 
-    @Test
+    @org.junit.Test
     public void Test1(){
         System.out.println("Test1");
     }

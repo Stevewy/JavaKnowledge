@@ -1,4 +1,4 @@
-package textclass;
+package testclass;
 
 /**
  * @author WangYao

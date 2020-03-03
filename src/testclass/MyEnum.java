@@ -1,4 +1,4 @@
-package annotation;
+package testclass;
 
 /**
  * @author WangYao

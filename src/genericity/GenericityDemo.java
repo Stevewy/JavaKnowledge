@@ -1,6 +1,6 @@
 package genericity;
 
-import textclass.Book;
+import testclass.Book;
 
 import java.util.ArrayList;
 
@@ -11,6 +11,7 @@ import java.util.ArrayList;
  */
 public class GenericityDemo <T> {
 
+    @SuppressWarnings("all")
     public static <E> E get(Class<E> type){  //给一个类型信息,得到一个对象(前提有默认构造器且可用)
         try {
             return type.newInstance();

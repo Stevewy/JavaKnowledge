@@ -1,4 +1,4 @@
-package textclass;
+package testclass;
 
 import java.io.Serializable;
 import java.util.Objects;

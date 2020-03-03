@@ -5,6 +5,8 @@ package annotation;
  * @date 2020/3/3
  * @function
  */
+//@MyAnno("a")
+@MyAnno(first = 2, value = "a")
 public class JavaAnnotation {
 
     @Override//重写
@@ -12,7 +14,7 @@ public class JavaAnnotation {
         return super.toString();
     }
 
-    @Deprecated//过时
+    @Deprecated//过时 ;
     public void first(){
         System.out.println("1");
     }
