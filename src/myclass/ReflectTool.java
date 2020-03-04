@@ -1,6 +1,6 @@
 package myclass;
 
-import annotation.ReflactAnnotation;
+import annotation.ReflectAnnotation;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -11,14 +11,14 @@ import java.lang.reflect.Method;
  * @function 通过类名和方法名来调用方法(目前缺陷较大)
  */
 @Deprecated
-@ReflactAnnotation(className = "testclass.Tests",method = "Test1")
-public class ReflactTool {
+@ReflectAnnotation(className = "testclass.Tests",method = "Test1")
+public class ReflectTool {
 
     public static void main(String[] args) {
         //得到该类的类
-        Class<ReflactTool> r = ReflactTool.class;
+        Class<ReflectTool> r = ReflectTool.class;
         //得到注解对象(实际是子类方法)
-        ReflactAnnotation annotation = r.getAnnotation(ReflactAnnotation.class);
+        ReflectAnnotation annotation = r.getAnnotation(ReflectAnnotation.class);
         //得到注解里面的类名和方法名
         String className = annotation.className();
         String methodName = annotation.method();
