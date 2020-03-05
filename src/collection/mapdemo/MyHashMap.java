@@ -59,9 +59,14 @@ public class MyHashMap<K, V> {
         loadFactor = 0.75f;
     }
 
+    //hash值目前不太行
+    private int hash(K key){
+        return key.hashCode() % size;
+    }
+
     public V put(K key, V val){
-        Node<K , V> node = new Node<>(key.hashCode(), key, val, null);
-        int sat = node.hash % size;
+        Node<K , V> node = new Node<>(hash(key), key, val, null);
+        int sat = node.hash;
 
         for(Node<K, V> n = table[sat]; n != null; n = n.next){
             if(n.key.equals(key)){
@@ -77,7 +82,7 @@ public class MyHashMap<K, V> {
     }
 
     public V get(K key){
-        int sat = key.hashCode() % size;
+        int sat = hash(key);
         for(Node<K, V> n = table[sat]; n != null; n = n.next){
             if(n.key.equals(key)){
                 return n.getVal();
