@@ -1,6 +1,7 @@
 package testclass;
 
 import lombok.SneakyThrows;
+import org.junit.Test;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
@@ -16,7 +17,7 @@ public class Tests {
 
     @SneakyThrows
     static Object parse(Class<?> c, List<String> s) {
-        Object o = c.newInstance();
+        Object o = c.getDeclaredConstructor().newInstance();
         int count = 0;
         Field[] fs = c.getDeclaredFields();
         for(Field f : fs){
@@ -38,12 +39,17 @@ public class Tests {
         return o;
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void mytest() {
         List<String> s = new ArrayList<>();
+        s.add("s");
         s.add("1");
         s.add("2");
-        Book2 b = (Book2) parse(Book2.class,s);
-        System.out.println(b);
+        s.add("3");
+        s.add("4");
+        s.add("true");
+        Test2 t = (Test2) parse(Test2.class,s);
+        System.out.println(t);
     }
 
 }
