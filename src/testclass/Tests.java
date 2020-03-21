@@ -40,7 +40,7 @@ public class Tests {
     }
 
     @Test
-    public void mytest() {
+    public void myTest() {
         List<String> s = new ArrayList<>();
         s.add("s");
         s.add("1");
