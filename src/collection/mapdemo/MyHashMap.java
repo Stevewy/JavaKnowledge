@@ -66,28 +66,24 @@ public class MyHashMap<K, V> {
 
     public V put(K key, V val){
         Node<K , V> node = new Node<>(hash(key), key, val, null);
-        int sat = node.hash;
+        int sat = node.hash;//存起来只算一遍,这里直接调
 
-        for(Node<K, V> n = table[sat]; n != null; n = n.next){
-            if(n.key.equals(key)){
+        for(Node<K, V> n = table[sat]; n != null; n = n.next)  //找一下有没有
+            if(n.key.equals(key))
                 return n.setVal(val);
-            }
-        }
 
-        if(table[sat] != null){
-            node.next = table[sat];
-        }
+
+        node.next = table[sat];//头部更新,java7做法,只用数字与链表
         table[sat] = node;
         return null;
     }
 
     public V get(K key){
         int sat = hash(key);
-        for(Node<K, V> n = table[sat]; n != null; n = n.next){
-            if(n.key.equals(key)){
+        for(Node<K, V> n = table[sat]; n != null; n = n.next)
+            if(n.key.equals(key))
                 return n.getVal();
-            }
-        }
+
         return null;
     }
 
