@@ -38,7 +38,7 @@ public class Node {
     public static class Builder{
         final int value;
         Node next = null;
-        Node tail = null;
+        static Node tail = null;
 
         public Builder(int value){
             this.value = value;
@@ -49,9 +49,10 @@ public class Node {
                 next = new Node(value);
                 tail = next;
             }
-            tail.next = new Node(value);
-            tail = tail.next;
-            return this;
+            else {
+                tail.next = new Node(value);
+                tail = tail.next;
+            }return this;
         }
 
         public Node getNode(){
