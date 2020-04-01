@@ -15,19 +15,27 @@ public class Son extends Father implements Interface1, Interface3 {
     public void setA(int a) {
         this.a = a;
     }
-    //可以继承父类
-    //但是不可以改变返回类型(重写(覆盖),重载,继承,实现)
+
+    /*
+     * 可以继承父类
+     * 但是不可以改变返回类型(重写(覆盖),重载,继承,实现)
+     */
 //    public int f(){return 1;}
 
     public int f(int i){return i;};
 
+//    public void printa(){
+//        System.out.println(a);
+//    }
+
     public static void main(String[] args) {
         /*
          * 接口方法冲突
+         * 有超类优先超类否则必须重写
          */
 
         /*
-         * 继承的缺陷
+         * 继承的缺陷,易混淆
          */
 //        Father[] f = new Father[5];
 //        Son[] s = new Son[5];
@@ -36,6 +44,8 @@ public class Son extends Father implements Interface1, Interface3 {
 
         /*
          * 继承里面动态绑定只有方法(虚方法表),如果有同名属性按静态类型,不符合多态
+         * (父类有a,子类有a,子类调父类打印a是打印父类a,自己打印a是自己a) 总结,不要同名
          */
+//        new Son().printa();
     }
 }

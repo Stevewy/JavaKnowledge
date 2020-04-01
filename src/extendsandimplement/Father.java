@@ -20,7 +20,6 @@ public class Father implements Interface1 {
         System.out.println(f.getA());
     }
 
-
     public void f(){}
 
     public static void f1(int num){
@@ -29,5 +28,9 @@ public class Father implements Interface1 {
 
     public final void f2(){
         System.out.println("father");
+    }
+
+    public void printa(){
+        System.out.println(a);
     }
 }
