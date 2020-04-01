@@ -7,14 +7,13 @@ import java.util.ArrayList;
 /**
  * @author WangYao
  * @date 2020/1/7
- * @function
+ * @function 类构造器
  */
 public class GenericityDemo <T> {
 
-    @SuppressWarnings("all")
     public static <E> E get(Class<E> type){  //给一个类型信息,得到一个对象(前提有默认构造器且可用)
         try {
-            return type.newInstance();
+            return type.getDeclaredConstructor().newInstance();
         }
         catch (Exception e){
             throw new RuntimeException(e);
