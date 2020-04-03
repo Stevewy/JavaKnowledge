@@ -5,7 +5,7 @@ import lombok.Getter;
 /**
  * @author WangYao
  * @date 2020/4/3
- * @function
+ * @function 简单日期类
  */
 @Getter
 public class MyDate {
