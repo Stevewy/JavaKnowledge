@@ -8,10 +8,10 @@ import java.lang.reflect.Method;
 /**
  * @author WangYao
  * @date 2020/3/3
- * @function 通过类名和方法名来调用方法(目前缺陷较大)
+ * @function 工具类,通过类名和方法名来调用方法(目前缺陷较大)
  */
 @Deprecated
-@ReflectAnnotation(className = "testclass.Tests",method = "Test1")
+@ReflectAnnotation(className = "testclass.Tests",method = "Test1")//这里写类名和方法
 public class ReflectTool {
 
     public static void main(String[] args) {
@@ -25,7 +25,7 @@ public class ReflectTool {
 
         try {
             Class cls = Class.forName(className);
-            Object obj = cls.newInstance();
+            Object obj = cls.getDeclaredConstructor().newInstance();
             Method method = cls.getMethod(methodName);
             method.invoke(obj);
         } catch (ClassNotFoundException e) {
