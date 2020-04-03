@@ -5,8 +5,9 @@ import java.util.Scanner;
 /**
  * @author WangYao
  * @date 2019/11/22
- * @function
+ * @function 以前的日期,以2019为基准
  */
+@Deprecated
 public class DateDemo {
 
     public static void main(String[] args) {
