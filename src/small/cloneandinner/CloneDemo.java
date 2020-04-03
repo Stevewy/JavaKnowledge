@@ -40,6 +40,7 @@ public class CloneDemo {
                 return super.clone();
             Person1 p = new Person1();
             p.age = age;
+            p.name = this.name;
             p.b = (Book) this.b.clone();
             return p;
         }
