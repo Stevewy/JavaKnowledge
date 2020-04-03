@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 /**
  * @author WangYao
  * @date 2019/12/16
- * @function 打印一个类
+ * @function 工具类,作用打印一个类
  */
 public class ObjectAnalyzer {
 
