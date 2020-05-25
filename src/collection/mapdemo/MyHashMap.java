@@ -3,7 +3,7 @@ package collection.mapdemo;
 /**
  * @author WangYao
  * @date 2020/2/14
- * @function
+ * @function 模拟hashmap
  */
 public class MyHashMap<K, V> {
 
@@ -12,7 +12,7 @@ public class MyHashMap<K, V> {
     //Set<Map.Entry<K,V>> entrySet;
 
     static class Node<K, V>{
-        final int hash;
+        final int hash; //先调用hashcode方法获取key的hashcode值,右移16位和原来16位做异或,在和table.length-1进行与运算,所以table.length要为2的整数次幂
         final K key;
         V val;
         Node<K, V> next;
