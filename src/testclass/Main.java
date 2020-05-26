@@ -1,6 +1,7 @@
 package testclass;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.logging.*;
 
 /**
@@ -47,7 +48,7 @@ public class Main {
         /*
          * 日志 Level类级别 SEVERE WARNING INFO CONFIG FINE FINER FINEST      OFF ALL
          */
-        Logger logger = Logger.getLogger("testclass.Main");//唯一标识符,一般使用全限定类名
+        /*Logger logger = Logger.getLogger("testclass.Main");//唯一标识符,一般使用全限定类名
         //日志记录输出
         logger.info("hello");
         //通用方法
@@ -61,7 +62,7 @@ public class Main {
         ConsoleHandler consoleHandler = new ConsoleHandler();
         SimpleFormatter simpleFormatter = new SimpleFormatter();
         consoleHandler.setFormatter(simpleFormatter);
-        FileHandler fileHandler = new FileHandler("./resource/journal/Journal.txt");
+        FileHandler fileHandler = new FileHandler("./resource/log/jul.log");
         fileHandler.setFormatter(simpleFormatter);
 
         logger.addHandler(consoleHandler);
@@ -73,12 +74,18 @@ public class Main {
         logger.config("config");
         logger.fine("fine");
         logger.finer("finer");
+        logger.finest("finest");*/
+
+        //通过配置文件
+        InputStream ins = Main.class.getClassLoader().getResourceAsStream("log/logging.properties");
+        LogManager logManager = LogManager.getLogManager();
+        logManager.readConfiguration(ins);
+
+        Logger logger = Logger.getLogger("testclass.Main");
+        logger.config("config");
+        logger.fine("fine");
+        logger.finer("finer");
         logger.finest("finest");
-
-
-
-
-
 
         /*
          * ...的使用
