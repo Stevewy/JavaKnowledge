@@ -74,6 +74,12 @@ public class Main {
         logger.fine("fine");
         logger.finer("finer");
         logger.finest("finest");
+
+
+
+
+
+
         /*
          * ...的使用
          */
