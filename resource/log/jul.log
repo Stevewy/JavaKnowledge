@@ -1,52 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE log SYSTEM "logger.dtd">
-<log>
-<record>
-  <date>2020-05-26T13:59:06.131389400Z</date>
-  <millis>1590501546131</millis>
-  <nanos>389400</nanos>
-  <sequence>0</sequence>
-  <logger>testclass.Main</logger>
-  <level>CONFIG</level>
-  <class>testclass.Main</class>
-  <method>main</method>
-  <thread>1</thread>
-  <message>config</message>
-</record>
-<record>
-  <date>2020-05-26T13:59:06.146348900Z</date>
-  <millis>1590501546146</millis>
-  <nanos>348900</nanos>
-  <sequence>1</sequence>
-  <logger>testclass.Main</logger>
-  <level>FINE</level>
-  <class>testclass.Main</class>
-  <method>main</method>
-  <thread>1</thread>
-  <message>fine</message>
-</record>
-<record>
-  <date>2020-05-26T13:59:06.147348600Z</date>
-  <millis>1590501546147</millis>
-  <nanos>348600</nanos>
-  <sequence>2</sequence>
-  <logger>testclass.Main</logger>
-  <level>FINER</level>
-  <class>testclass.Main</class>
-  <method>main</method>
-  <thread>1</thread>
-  <message>finer</message>
-</record>
-<record>
-  <date>2020-05-26T13:59:06.147348600Z</date>
-  <millis>1590501546147</millis>
-  <nanos>348600</nanos>
-  <sequence>3</sequence>
-  <logger>testclass.Main</logger>
-  <level>FINEST</level>
-  <class>testclass.Main</class>
-  <method>main</method>
-  <thread>1</thread>
-  <message>finest</message>
-</record>
-</log>
+5月 27, 2020 4:02:13 下午 testclass.Main main
+配置: config
+5月 27, 2020 4:02:13 下午 testclass.Main main
+详细: fine
+5月 27, 2020 4:02:13 下午 testclass.Main main
+较详细: finer
+5月 27, 2020 4:02:13 下午 testclass.Main main
+非常详细: finest
+5月 27, 2020 4:02:53 下午 testclass.Main main
+配置: config
+5月 27, 2020 4:02:53 下午 testclass.Main main
+详细: fine
+5月 27, 2020 4:02:53 下午 testclass.Main main
+较详细: finer
+5月 27, 2020 4:02:53 下午 testclass.Main main
+非常详细: finest
