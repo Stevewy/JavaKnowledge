@@ -8,6 +8,10 @@ package extendsandimplement;
 public class Father implements Interface1 {
     private int a = 5;
 
+    public Father() {
+        printa();
+    }
+
     public int getA() {
         return a;
     }
@@ -16,9 +20,9 @@ public class Father implements Interface1 {
         this.a = a;
     }
 
-    public void a(Father f){
+    /*public void a(Father f){
         System.out.println(f.getA());
-    }
+    }*/
 
     public void f(){}
 
