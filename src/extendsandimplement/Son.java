@@ -24,9 +24,9 @@ public class Son extends Father implements Interface1, Interface3 {
 
     public int f(int i){return i;};
 
-//    public void printa(){
-//        System.out.println(a);
-//    }
+    public void printa(){
+        System.out.println(a);
+    }
 
     public static void main(String[] args) {
         /*
@@ -35,12 +35,17 @@ public class Son extends Father implements Interface1, Interface3 {
          */
 
         /*
-         * 继承的缺陷,易混淆
+         * 继承的缺陷
+         * 1.易混淆
+         * 2.父类构造方法如果调用了父类的方法,而子类重写该方法,创建子类对象会调用子类方法,易出错
          */
 //        Father[] f = new Father[5];
 //        Son[] s = new Son[5];
 //        f = s;
 //        f[0] = new Father();
+
+//        new Father();
+//        new Son();
 
         /*
          * 继承里面动态绑定只有方法(虚方法表),如果有同名属性按静态类型,不符合多态
