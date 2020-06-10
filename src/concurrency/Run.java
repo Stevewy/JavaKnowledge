@@ -1,8 +1,7 @@
 package concurrency;
 
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.ArrayList;
+import java.util.concurrent.*;
 
 /**
  * @author WangYao
@@ -11,13 +10,30 @@ import java.util.concurrent.Executors;
  */
 public class Run {
     public static void main(String[] args) {
-//        ExecutorService exec = Executors.newCachedThreadPool(); //用时创建
-//        ExecutorService exec = Executors.newFixedThreadPool(5); //一次创建好
-        ExecutorService exec = Executors.newSingleThreadExecutor(); //有序
+        //runnable
+        ExecutorService exec = Executors.newCachedThreadPool();   //用时创建
+//        ExecutorService exec = Executors.newFixedThreadPool(5);   //一次创建好
+//        ExecutorService exec = Executors.newSingleThreadExecutor(); //只有一个(有序)
         for (int i = 0; i < 5; i++) {
-//            new Thread(new LiftOff()).start(); // 顺序混乱
-            exec.execute(new LiftOff());
+//            new Thread(new LiftOff()).start();
+//            exec.execute(new LiftOff());  //管理异步任务执行,无需显示管理线程生命周期
+            exec.execute(new SleepingTask());
         }
-        exec.shutdown();
+
+        //callable
+//        ArrayList<Future<String>> results = new ArrayList<>();
+//        for(int i = 0; i < 10; i++)
+//            results.add(exec.submit(new TestWithResult(i)));
+//        for (Future<String> fs : results)
+//            try {
+//                System.out.println(fs.get());
+//            } catch (InterruptedException | ExecutionException e){
+//                e.printStackTrace();
+//            } finally {
+//                exec.shutdown();
+//            }
+
+
+
     }
 }
