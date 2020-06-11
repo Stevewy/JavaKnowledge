@@ -5,7 +5,7 @@ import java.util.concurrent.Callable;
 /**
  * @author WangYao
  * @date 2020/6/10
- * @function
+ * @function 带返回值
  */
 public class TestWithResult implements Callable<String> {
     int id;
