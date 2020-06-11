@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author WangYao
  * @date 2020/6/10
- * @function
+ * @function 睡眠
  */
 public class SleepingTask extends LiftOff {
     public void run(){
