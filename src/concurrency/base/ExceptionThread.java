@@ -1,4 +1,4 @@
-package concurrency;
+package concurrency.base;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -7,7 +7,7 @@ import java.util.concurrent.ThreadFactory;
 /**
  * @author WangYao
  * @date 2020/6/12
- * @function
+ * @function 处理并发时的异常
  */
 public class ExceptionThread implements Runnable {
     @Override
