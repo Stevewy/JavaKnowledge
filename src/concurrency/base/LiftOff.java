@@ -1,4 +1,4 @@
-package concurrency;
+package concurrency.base;
 
 /**
  * @author WangYao
