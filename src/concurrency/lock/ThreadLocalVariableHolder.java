@@ -1,4 +1,4 @@
-package concurrency;
+package concurrency.lock;
 
 import java.util.Random;
 
