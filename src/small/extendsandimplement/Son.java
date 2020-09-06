@@ -1,4 +1,4 @@
-package extendsandimplement;
+package small.extendsandimplement;
 
 /**
  * @author WangYao
@@ -7,6 +7,10 @@ package extendsandimplement;
  */
 public class Son extends Father implements Interface1, Interface3 {
     private int a = 4;
+
+    public Son() {
+        super();
+    }
 
     public int getA() {
         return a;
@@ -37,7 +41,7 @@ public class Son extends Father implements Interface1, Interface3 {
         /*
          * 继承的缺陷
          * 1.易混淆
-         * 2.父类构造方法如果调用了父类的方法,而子类重写该方法,创建子类对象会调用子类方法,易出错
+         * 2.父类构造方法如果调用了父类的方法,而子类重写该方法,创建子类对象会调用子类重写后方法,易出错
          */
 //        Father[] f = new Father[5];
 //        Son[] s = new Son[5];
@@ -51,6 +55,6 @@ public class Son extends Father implements Interface1, Interface3 {
          * 继承里面动态绑定只有方法(虚方法表),如果有同名属性按静态类型,不符合多态
          * (父类有a,子类有a,子类调父类打印a是打印父类a,自己打印a是自己a) 总结,不要同名
          */
-//        new Son().printa();
+        new Son().printa();//运行顺序 (因为是第一次所以先加载静态, 载入.class) 在堆上分配空间 清空堆 初始化 使用构造器 (加载父类好像是在清空堆和初始化之间)
     }
 }
