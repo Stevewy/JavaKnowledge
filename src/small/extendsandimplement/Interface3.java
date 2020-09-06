@@ -1,4 +1,4 @@
-package extendsandimplement;
+package small.extendsandimplement;
 
 /**
  * @author WangYao
