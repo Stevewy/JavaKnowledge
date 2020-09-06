@@ -1,4 +1,4 @@
-package genericity;
+package small.genericity;
 
 import testclass.Book;
 

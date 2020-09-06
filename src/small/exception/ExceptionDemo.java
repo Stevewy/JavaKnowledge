@@ -1,4 +1,4 @@
-package exception;
+package small.exception;
 
 import java.io.FileInputStream;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package string;
+package small.string;
 
 import java.util.StringJoiner;
 

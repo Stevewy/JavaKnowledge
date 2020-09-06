@@ -1,6 +1,6 @@
-package myclass;
+package small.myclass;
 
-import annotation.ReflectAnnotation;
+import small.annotation.ReflectAnnotation;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

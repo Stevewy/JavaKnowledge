@@ -1,4 +1,4 @@
-package myclass;
+package small.myclass;
 
 import java.lang.reflect.*;
 
@@ -64,11 +64,11 @@ public class ClassDemo {
         利用反射来得到一个类全部域 构造器 方法
          */
         /*Scanner in = new Scanner(System.in);
-        string name = in.nextLine();
+        small.string name = in.nextLine();
         try {
-            myclass c = myclass.forName(name);
-            myclass sc = c.getSuperclass();                                               //得到父类
-            string modifiers = Modifier.toString(c.getModifiers());                     //得到类型(PUBLIC... STATIC FINAL SYNCHRONIZED VOLATILE TRANSIENT NATIVE INTERFACE ABSTRACT STRICT BRIDGE VARARGS SYNTHETIC ANNOTATION ENUM MANDATED)
+            small.myclass c = small.myclass.forName(name);
+            small.myclass sc = c.getSuperclass();                                               //得到父类
+            small.string modifiers = Modifier.toString(c.getModifiers());                     //得到类型(PUBLIC... STATIC FINAL SYNCHRONIZED VOLATILE TRANSIENT NATIVE INTERFACE ABSTRACT STRICT BRIDGE VARARGS SYNTHETIC ANNOTATION ENUM MANDATED)
             if(modifiers.length() > 0)
                 System.out.println("modifiers = " + modifiers);
             if(sc != null && !sc.getName().equals("java.lang.Object"))               //sc!=Object.class;
@@ -81,7 +81,7 @@ public class ClassDemo {
             printMethods(c);
             System.out.println("}");
         }
-        catch (exception e){
+        catch (small.exception e){
 //            System.out.println("出问题");
             Logger.getGlobal().log(Level.WARNING, "出问题", e);//新打印方法
         }*/
@@ -91,7 +91,7 @@ public class ClassDemo {
          */
 //        book book = new book("ad","a");
 //        System.out.println(ObjectAnalyzer.toString(book));
-//        myclass c = book.getClass();
+//        small.myclass c = book.getClass();
 //        Field f = c.getDeclaredField("name");//改变叫做name的域
 //        f.setAccessible(true);//这个不加的话就有限制(如果可以直接改就可以不加,否则就要加)
 //        f.set(book, "你好");//第一个是对象,第二个是你要改的值
@@ -113,7 +113,7 @@ public class ClassDemo {
         /*
          * 利用反射来调用一个类的方法(代理)
          */
-//        Method m = ClassDemo.class.getDeclaredMethod("x", string.class, Integer.class);
+//        Method m = ClassDemo.class.getDeclaredMethod("x", small.string.class, Integer.class);
 //        m.invoke(null, "s", 1);//第一个是对象,如果是静态可以写null,后面是参数 使用...
 
     }

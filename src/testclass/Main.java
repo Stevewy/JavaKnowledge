@@ -2,6 +2,7 @@ package testclass;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Iterator;
 import java.util.logging.*;
 
 /**
@@ -77,15 +78,15 @@ public class Main {
         logger.finest("finest");*/
 
         //通过配置文件
-        InputStream ins = Main.class.getClassLoader().getResourceAsStream("log/logging.properties");
-        LogManager logManager = LogManager.getLogManager();
-        logManager.readConfiguration(ins);
-
-        Logger logger = Logger.getLogger("testclass.Main");
-        logger.config("config");
-        logger.fine("fine");
-        logger.finer("finer");
-        logger.finest("finest");
+//        InputStream ins = Main.class.getClassLoader().getResourceAsStream("log/logging.properties");
+//        LogManager logManager = LogManager.getLogManager();
+//        logManager.readConfiguration(ins);
+//
+//        Logger logger = Logger.getLogger("testclass.Main");
+//        logger.config("config");
+//        logger.fine("fine");
+//        logger.finer("finer");
+//        logger.finest("finest");
 
         /*
          * ...的使用
@@ -93,7 +94,7 @@ public class Main {
 //        if(t-- == 1)
 //            testclass.Main.main("asd","sad","few","fewa");
 //        else
-//            for(string s : args)
+//            for(small.string s : args)
 //                System.out.println(s);
 
         /*

@@ -1,4 +1,4 @@
-package annotation;
+package small.annotation;
 
 /**
  * @author WangYao

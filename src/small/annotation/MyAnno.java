@@ -1,4 +1,4 @@
-package annotation;
+package small.annotation;
 
 import java.lang.annotation.*;
 
@@ -10,7 +10,7 @@ import java.lang.annotation.*;
  * @since 1.5
  *
  * 本质是接口,继承了 Annotation 但不能这么写上去
- * 可以返回String int enum annotation 数组
+ * 可以返回String int enum small.annotation 数组
  *
  * 4个元注解
  * @Target TYPE 类 FIELD 属性 METHOD 方法

@@ -1,4 +1,4 @@
-package myclass;
+package small.myclass;
 
 import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Array;
