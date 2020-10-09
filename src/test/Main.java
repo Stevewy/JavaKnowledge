@@ -1,9 +1,6 @@
-package testclass;
+package test;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.Iterator;
-import java.util.logging.*;
 
 /**
  * @author WangYao
@@ -46,53 +43,12 @@ public class Main {
 //        Main m1 = new Main();//访问对象
         //访问静态成员
 
-        /*
-         * 日志 Level类级别 SEVERE WARNING INFO CONFIG FINE FINER FINEST      OFF ALL
-         */
-        /*Logger logger = Logger.getLogger("testclass.Main");//唯一标识符,一般使用全限定类名
-        //日志记录输出
-        logger.info("hello");
-        //通用方法
-        logger.log(Level.INFO, "msg");
-        //占位符
-        logger.log(Level.INFO, "你={0}",new Object[]{x});
-
-        //自定义配置,并保存到文件
-        logger.setUseParentHandlers(false);
-
-        ConsoleHandler consoleHandler = new ConsoleHandler();
-        SimpleFormatter simpleFormatter = new SimpleFormatter();
-        consoleHandler.setFormatter(simpleFormatter);
-        FileHandler fileHandler = new FileHandler("./resource/log/jul.log");
-        fileHandler.setFormatter(simpleFormatter);
-
-        logger.addHandler(consoleHandler);
-        logger.addHandler(fileHandler);
-        logger.setLevel(Level.ALL);
-        consoleHandler.setLevel(Level.ALL);
-        fileHandler.setLevel(Level.ALL);
-
-        logger.config("config");
-        logger.fine("fine");
-        logger.finer("finer");
-        logger.finest("finest");*/
-
-        //通过配置文件
-//        InputStream ins = Main.class.getClassLoader().getResourceAsStream("log/logging.properties");
-//        LogManager logManager = LogManager.getLogManager();
-//        logManager.readConfiguration(ins);
-//
-//        Logger logger = Logger.getLogger("testclass.Main");
-//        logger.config("config");
-//        logger.fine("fine");
-//        logger.finer("finer");
-//        logger.finest("finest");
 
         /*
          * ...的使用
          */
 //        if(t-- == 1)
-//            testclass.Main.main("asd","sad","few","fewa");
+//            test.Main.main("asd","sad","few","fewa");
 //        else
 //            for(small.string s : args)
 //                System.out.println(s);
@@ -162,5 +118,9 @@ public class Main {
 //        long l2 = System.nanoTime();
 //        System.out.println("2 " + (l2 - f2));
 
+        // Integer初始化, 如果在-128-127是使用缓存,两者使用==是相同,否则不同. 建议使用.equal
+//        Integer i1 = 12;
+//        Integer i2 = 12;
+//        if (i1 == i2) System.out.println("Yes");
     }
 }
