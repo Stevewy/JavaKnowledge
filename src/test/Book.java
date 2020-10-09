@@ -1,4 +1,4 @@
-package testclass;
+package test;
 
 import java.io.Serializable;
 import java.util.Objects;
