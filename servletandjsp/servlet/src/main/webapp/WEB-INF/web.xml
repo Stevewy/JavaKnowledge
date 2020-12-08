@@ -1,0 +1,60 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <!--servletContext 功能:
+    1. 共享数据
+    2. 请求转发
+    3. 读取资源
+    4. 获得初始化参数
+  -->
+
+  <context-param>
+    <param-name>url</param-name>
+    <param-value>jdbc:mysql://localhost:3306/mybatis</param-value>
+  </context-param>
+  
+  <servlet>
+    <servlet-name>hello</servlet-name>
+    <servlet-class>servlet.HelloServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>error</servlet-name>
+    <servlet-class>servlet.ErrorServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>getContext</servlet-name>
+    <servlet-class>servlet.GetServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>sendContext</servlet-name>
+    <servlet-class>servlet.SendServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>parameter</servlet-name>
+    <servlet-class>servlet.ServletParameter</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>hello</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>error</servlet-name>
+    <url-pattern>/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getContext</servlet-name>
+    <url-pattern>/getContext</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>sendContext</servlet-name>
+    <url-pattern>/sendContext</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>parameter</servlet-name>
+    <url-pattern>/parameter</url-pattern>
+  </servlet-mapping>
+</web-app>
