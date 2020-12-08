@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * @author WangYao
  * @date 2020/10/26
- * @function
+ * @function 共享数据
  */
 public class GetServlet extends HttpServlet {
 
