@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--
+    html 主体
+    css  美化
+    js   灵魂
+-->
+<html lang="zh">
+    <head>
+        <!--少了这个中文乱码-->
+        <meta charset="UTF-8">
+        <title>标题</title>
+        <style>
+            .red{
+                color: red;
+            }
+            .blue{
+                color: blue;
+            }
+            /*span{
+                font-size: 120px;
+                color: red;
+            }
+            .study{
+                color: yellow;
+            }
+            #id{
+                font-size: 120px;
+            }
+            div{
+                border: 1px solid black;
+                width: 200px;
+                height: 200px;
+                background-color: #ff1111;!*红绿蓝*!
+            }
+            div span{
+                !*不写会成上面的*!
+                font-size: 15px;
+                color: black;
+                display: inline;
+            }*/
+            /*#d1{
+                background-color: red;
+                width: 100px;
+                height: 100px;
+                float: right;
+            }
+            #d2{
+                background-color: green;
+                width: 110px;
+                height: 110px;
+                float: left;
+            }
+            #d3{
+                 background-color: blue;
+                 width: 120px;
+                 height: 120px;
+                float: none;
+             }
+            #d4{
+                background-color: aqua;
+                border: 1px solid black; !*通用边框*!
+                border-top: 1px solid red; !*上边框*!
+                padding-left: 100px; !*左内边距*!
+                margin-top: 100px;   !*上外边距*!
+                margin-left: 20px;   !*左外边距*!
+            }*/
+
+        </style>
+       <!-- <link href="css/test.css" rel="stylesheet" type="text/css" />--><!--link 标签可以将css代码放到css文件-->
+
+        <!--<script src="js/hello.js"></script>-->   <!--写了src,就不能写js代码了-->
+        <!--<script>
+            //正则
+            var reg = /^\s*$/      /*全符合*/
+            var reg2 = /\s+/       /*只有有一个符合*/
+            alert(reg.test(" a "))
+            alert(reg2.test(" a "))
+        </script>-->
+        <!--<script>
+            //数组,相当于arraylist, 但是多一些方法且可以使用下标访问
+            var arr = [1,2,3,4]
+            alert(arr)
+            alert(arr.join("+"))
+            alert(arr.reverse())
+            //还有push和pop
+        </script>-->
+        <!--<script>
+            //uri 统一资源标识符
+            //url 统一资源定位器
+            eval("var x = 10;")
+            alert(x)
+            var msg = "https://github.com/Stevewy(王耀)" //这个是url
+            alert(encodeURI(msg))
+            alert(decodeURI(encodeURI(msg)))
+            alert(parseInt("10.5"))
+            alert(parseFloat("a10.5"))
+        </script>-->
+        <!--<script>
+            //对象与函数
+            function getSum(a, b) {
+                return a+b
+            }
+            function Person() {
+                this.name = "王耀"
+                this.age = 18
+            }
+            var me = {name:"王耀",age:"18"};
+        </script>-->
+        <!--<script>
+            //bom对象  (目前只有window)
+            function run() {
+                var b = confirm("你好吗?")
+                alert(b)
+                if(b){
+                    clearInterval(id)
+                    // clearTimeout(id)
+                }
+            }
+            var id = setInterval("run()", 5000)
+            // var id = setTimeout("run()",5000)
+        </script>-->
+    </head>
+    <body>
+    <!--第一天 html-->
+        <!--<font color="red" face="楷体">红色</font><br/>
+        <font size="-1">-1</font><br/><font size="0">0</font><br/><font size="1">1</font><br/><font size="7">7</font><br/><font size="8">8</font><br/>
+        <img src="https://tva2.sinaimg.cn/large/006yt1Omgy1ge6f84cxztj30vm1471kx.jpg" width="20%" height="20%"/>&lt;!&ndash;定值不可取,动态改变&ndash;&gt;
+        <ul>
+            <li>1</li>
+            <li>2</li>
+        </ul>
+        <ol>
+            <li>1</li>
+            <li>2</li>
+        </ol><br/>
+
+        <a href="My.html">My</a>
+        <a href="My.html">
+            <img src="img/IMG_20200412_102252.jpg" width="20%" height="20%">
+        </a><br/>-->
+
+    <!--第二天-->
+        <!--<table border="1" width="20%">
+            <tr>
+                &lt;!&ndash;居中加粗&ndash;&gt;
+                <th colspan="2">姓名</th>
+                <th>性别</th>
+                <th>生日</th>
+            </tr>
+            <tr>
+                <td>王耀</td>
+                <td rowspan="2">王耀</td>
+                <td>男</td>
+                <td>不详</td>
+            </tr>
+            <tr>
+                <td>王耀</td>
+                <td>男</td>
+                <td>不详</td>
+            </tr>
+        </table>
+
+        <span>
+            少量
+        </span>
+        <div>
+            大量
+        </div>
+
+        <form action="" method="post">
+            ID<input type="text" name="id" readonly="readonly" value="1"><br/>
+            姓名<input name="name"/><br/>
+            密码<input type="password" name="password"><br/>
+            姓别<input type="radio" name="sex" value="男" checked="checked"/>男 <input type="radio" name="sex" value="女"/>女<br/>
+            爱好<input type="checkbox" name="hobby" value="play">玩<input type="checkbox" name="hobby" value="wan">完<input type="checkbox" name="hobby" value="late">晚<br/>
+            照片<input type="file" value="浏览"><br/>
+            <select name="地址">
+                <option value="">选择你的地址</option>
+                <option value="北京">北京</option>
+                <option value="成都">成都</option>
+            </select><br/>
+            个人简介<textarea name="个人简介">在这里写你的自我介绍</textarea><br/>
+            <input type="submit" value="提交">
+            <input type="reset" value="重置">
+            <input type="button" value="按钮">
+        </form>-->
+
+    <!--第三天css-->
+        <!--<font style="font-size: 120px;">你好</font>
+        <span>ohhh</span>
+        <div class="study">快去学习</div>
+        <div id="id">id</div>
+        <div>
+            <span>不变</span>
+        </div>-->
+    <!--第四天-->
+        <!--<div id="d1">1</div>
+        <div id="d2">2</div>
+        <div id="d3">3</div>
+        <div id="d4">4</div>-->
+    <!--第???天 js-->
+        <!--<input type="text" id="t1" value="你好">
+        <script>
+            //dom对象 可以获得并修改value className(修改class) checked innerHTML(有+=来追加)
+            var t1 = document.getElementById("t1")
+            t1.value="哈哈"
+            后面返回是数组
+            var arr = document.getElementsByName("");
+            var arr2 = document.getElementsByTagName("input");
+            var arr3 = document.getElementsByClassName("");
+        </script>-->
+        <font color="red" class="red" id="tx">目前是红色</font>
+        <!--事件源:按钮 事件:点击, 注册/绑定监听器 =
+            事件:
+                onclick  点击
+                onfocus  获得焦点
+                onblur   失去焦点
+                onchange 发生改变
+                onload   加载完
+                onsubmit 表单提交 (onsubmit="return function()" 返回布尔类型)
+                onkeyup  键位弹起事件(松开键盘时) 做校验
+                onmouseover 鼠标移入事件
+                onmouseout 鼠标移出事件
+            绑定监听器:
+                事件="function(如果有参数) function(绑定多个监听器)" 写js要改html,不推荐
+                window.事件=监听器
+            -->
+        <input type="button" value="变成蓝色" id="b" onclick="f()">
+        <script>
+            /*监听器*/
+            function f() {
+                alert(1);
+                var t = document.getElementById("tx");
+                t.innerHTML = "现在是蓝色";
+                t.className = "blue"
+            }
+            //分开的写法
+            window.onload=function () {
+                var b = document.getElementById("b")
+                b.onclick=f()
+            }
+        </script>
+    </body>
+
+</html>
