@@ -1,0 +1,26 @@
+#d1{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    float: right;
+}
+#d2{
+    background-color: green;
+    width: 110px;
+    height: 110px;
+    float: left;
+}
+#d3{
+    background-color: blue;
+    width: 120px;
+    height: 120px;
+    float: none;
+}
+#d4{
+    background-color: aqua;
+    border: 1px solid black; /*通用边框*/
+    border-top: 1px solid red; /*上边框*/
+    padding-left: 100px; /*左内边距*/
+    margin-top: 100px;   /*上外边距*/
+    margin-left: 20px;   /*左外边距*/
+}
