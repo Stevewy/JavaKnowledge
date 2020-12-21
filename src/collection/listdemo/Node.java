@@ -44,7 +44,7 @@ public class Node {
             this.value = value;
         }
 
-        public Builder nextvalue(int value){
+        public Builder nextValue(int value){
             if(next == null) {
                 next = new Node(value);
                 tail = next;
