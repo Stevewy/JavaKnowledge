@@ -1,6 +1,6 @@
 package small.genericity;
 
-import testclass.Book;
+import test.Book;
 
 import java.util.ArrayList;
 
