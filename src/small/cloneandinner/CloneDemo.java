@@ -1,6 +1,6 @@
 package small.cloneandinner;
 
-import testclass.Book;
+import test.Book;
 
 /**
  * @author WangYao
