@@ -1,6 +1,6 @@
 package collection.mapdemo;
 
-import testclass.Book;
+import test.Book;
 
 import java.util.HashMap;
 import java.util.Iterator;
