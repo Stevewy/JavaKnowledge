@@ -11,7 +11,7 @@ import java.lang.reflect.Method;
  * @function 工具类,通过类名和方法名来调用方法(目前缺陷较大)
  */
 @Deprecated
-@ReflectAnnotation(className = "testclass.Tests",method = "Test1")//这里写类名和方法
+@ReflectAnnotation(className = "test.Tests",method = "Test1")//这里写类名和方法
 public class ReflectTool {
 
     public static void main(String[] args) {
